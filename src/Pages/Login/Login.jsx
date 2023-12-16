@@ -25,8 +25,16 @@ function Login() {
           <div className="login-form">
             {/* Login Form */}
             <form className="form">
-              <Input type="text" placeholder="Your E-Number" />
-              <Input type="password" placeholder="Password" />
+              <Input
+                style={{ border: "1px solid black" }}
+                type="text"
+                placeholder="Your E-Number"
+              />
+              <Input
+                style={{ border: "1px solid black" }}
+                type="password"
+                placeholder="Password"
+              />
               <div
                 style={{
                   display: "flex",

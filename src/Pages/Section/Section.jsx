@@ -3,9 +3,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Section = ({ secNum, classNum, handleSec }) => {
-  const section = ["a", "b", "c", "d"];
+  const section = ["a", "b", "c", "d", "e"];
   return (
     <Main>
+      {}
       <div className="classes">
         <div className="card">
           {section.map((item) => (

@@ -8,12 +8,17 @@
 
 *{
   font-family: "Poppins";
-  margin: 1rem 1rem;
+  margin: 0.7rem 1rem;
 
+
+}
+html{
+  margin: 0.7rem 1rem;
 }
 
 :root{
   --lightBlue : #E1E0FA;
   --darkBlue: #272372;
+  --textColor: #ffffff;
 
 }

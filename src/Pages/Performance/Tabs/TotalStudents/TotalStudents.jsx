@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import StudentVCard from "../../../../Components/Card/StudentVCard";
+import StudentHCard from "../../../../Components/Card/StudentHCard";
 
-import StudentHCard from "../../Components/Card/StudentHCard";
-
-const Attendance = ({ studentData, classNum, secNum, handleRoll }) => {
+const TotalStudents = ({ studentData, classNum, secNum, handleRoll }) => {
   const [selectedFilter, setSelectedFilter] = useState(null);
   const [filteredItems, setFilteredItems] = useState(studentData);
   const filters = ["90", "80", "70", "60"];
@@ -53,7 +53,7 @@ const Attendance = ({ studentData, classNum, secNum, handleRoll }) => {
   return (
     <Main>
       <div className="heading">
-        <h1>Class {classNum} Attendance</h1>
+        <h1>Class {classNum} Percentage</h1>
       </div>
       <div className="buttonCategories">
         <button
@@ -94,7 +94,7 @@ const Attendance = ({ studentData, classNum, secNum, handleRoll }) => {
   );
 };
 
-export default Attendance;
+export default TotalStudents;
 
 const Main = styled.div`
   .itemContainer {
