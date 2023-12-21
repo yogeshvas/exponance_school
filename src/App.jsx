@@ -18,6 +18,7 @@ import Performance from "./Pages/Performance/Performance";
 
 import { useEffect, useState } from "react";
 import IndividualProfilePage from "./Pages/Performance/Pages/IndividualProfilePage/IndividualProfilePage";
+import OtherAttributes from "./Pages/OtherAttributes/OtherAttributes";
 
 function App() {
   const [selectedTab, setSelectedTab] = useState(
@@ -53,7 +54,7 @@ function App() {
           path="/courses"
           element={<Courses handleClass={handleClass} />}
         />
-
+        <Route path="/attributes" element={<OtherAttributes />} />
         <Route path="/attributes/cabinet" element={<Cabinet />} />
         <Route path="/attributes/complaints" element={<Complaints />} />
         <Route path="/attributes/events" element={<Events />} />
@@ -84,7 +85,6 @@ function App() {
               handleRoll={handleRoll}
               selectedTab={selectedTab}
               setSelectedTab={setSelectedTab}
-              s
             />
           }
         />

@@ -100,12 +100,13 @@ const Main = styled.div`
   .itemContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    text-align: left;
     align-items: center;
   }
 
   .buttonCategories {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
 
   .buttonCategories button {

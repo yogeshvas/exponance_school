@@ -5,7 +5,7 @@ const SearchButton = () => {
   return (
     <Main>
       <div className="chat-input-container">
-        <i className="fa fa-search chat-search-icon" />
+        <i className="chat-search-icon" />
         <input type="text" placeholder="Search student..." />
       </div>
     </Main>
@@ -36,5 +36,10 @@ const Main = styled.div`
     transform: translateY(-50%);
     color: var(--darkBlue); /* Set your desired color */
     font-size: 18px; /* Set your desired font size */
+  }
+  @media (max-width: 768px) {
+    .chat-input-container {
+      width: 200px;
+    }
   }
 `;

@@ -170,8 +170,17 @@ const Performance = ({
           secNum={secNum}
           handleRoll={handleRoll}
         />
-      ) : (
+      ) : selectedTab === "Average Marks" ? (
         <AverageMarks />
+      ) : (
+        <PerformancePageData
+          studentData={studentData}
+          classNum={classNum}
+          secNum={secNum}
+          rollNum={rollNum}
+          setRollNum={setRollNum}
+          handleRoll={handleRoll}
+        />
       )}
     </Main>
   );

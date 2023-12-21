@@ -7,7 +7,6 @@ import fails from "../../../assets/icons8-score-100.png";
 
 const LocalTabBar = ({ selectedTab, setSelectedTab }) => {
   const handleOnClick = (tabName) => {
-    console.log(tabName);
     localStorage.setItem("selectedTab", tabName);
   };
   return (

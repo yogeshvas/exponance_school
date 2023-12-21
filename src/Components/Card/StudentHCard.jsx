@@ -1,3 +1,5 @@
+// StudentHCard.jsx
+
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
@@ -13,28 +15,29 @@ const StudentHCard = ({
 }) => {
   return (
     <Main>
-      <NavLink
-        onClick={() => handleRoll(roll)}
-        to={`/courses/${classNum}/${secNum}/${roll}`}
-        className="effects"
-      >
-        <div key={name} className="card">
-          <div className="avatar">
-            <img
-              style={{ width: "3rem", borderRadius: "50%" }}
-              src={avatar}
-              alt=""
-            />
+      <div onClick={() => handleRoll(roll)}>
+        <NavLink
+          to={`/courses/${classNum}/${secNum}/${roll}`}
+          className="effects"
+        >
+          <div key={name} className="card">
+            <div className="avatar">
+              <img
+                style={{ width: "5rem", borderRadius: "50%" }}
+                src={avatar}
+                alt=""
+              />
+            </div>
+            <div className="details">
+              <div className="name">{name}</div>
+              <div className="roll">{roll}</div>
+            </div>
+            <div className="percentage">
+              <h3>{percentage}%</h3>
+            </div>
           </div>
-          <div className="details">
-            <div className="name">{name}</div>
-            <div className="roll">{roll}</div>
-          </div>
-          <div className="percentage">
-            <h3>{percentage}%</h3>
-          </div>
-        </div>
-      </NavLink>
+        </NavLink>
+      </div>
     </Main>
   );
 };
@@ -50,13 +53,20 @@ const Main = styled.div`
     height: auto;
     background-color: var(--lightBlue);
     color: var(--darkBlue);
-    margin: 0.5rem;
+    margin: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
     &:hover {
       background-color: #c0b8ea;
     }
     align-items: center;
     border-radius: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      grid-template-columns: 1fr 1fr; // Change to 1 column for mobile devices
+    }
   }
 `;
